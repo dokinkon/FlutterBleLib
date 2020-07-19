@@ -423,4 +423,12 @@ class InternalBleManager
         descriptorUuid,
         transactionId,
       );
+
+  @override
+  Peripheral createPeripheral(String name, String peripheralIdentifier) {
+    return Peripheral.fromJson(
+      {"name": name, "id": peripheralIdentifier},
+      this,
+    );
+  }
 }

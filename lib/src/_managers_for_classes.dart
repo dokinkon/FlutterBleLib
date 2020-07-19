@@ -2,6 +2,7 @@ import 'dart:typed_data';
 
 import 'package:flutter_ble_lib/flutter_ble_lib.dart';
 
+import '../flutter_ble_lib.dart';
 import '_internal.dart';
 
 abstract class ManagerForPeripheral {
@@ -12,6 +13,8 @@ abstract class ManagerForPeripheral {
     bool refreshGatt,
     Duration timeout,
   });
+
+  Peripheral createPeripheral(String name, String peripheralIdentifier);
 
   Future<bool> isPeripheralConnected(String peripheralIdentifier);
 

@@ -41,6 +41,8 @@ abstract class BleManager {
     return _instance;
   }
 
+  Peripheral createPeripheral(String name, String peripheralIdentifier);
+
   /// Cancels transaction's return, resulting in [BleError] with
   /// [BleError.errorCode] set to [BleErrorCode.operationCancelled] being returned
   /// from transaction's Future.
