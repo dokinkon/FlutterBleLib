@@ -1,3 +1,20 @@
+## 2.3.1
+
+* Fix connection timeout on iOS
+* Fix emitting current connection state on iOS
+* Update MBA to 0.1.7:
+    * Fix lack of disconnection event on iOS when connection fails to be established
+    * Fix not all errors being passed through onError callbacks on Android (thanks, @eliaslecomte)
+
+## 2.3.0
+
+* add `BleManager.createUnsafePeripheral()` to allow for connecting to known peripheral without launching scan first
+  **NOTE:** this change will not work with BLEmulator below 1.2.0
+
+## 2.2.9
+
+* Fixed issue with incorrectly typed Stream
+
 ## 2.2.8
 
 * Formatted all sources according to dartfmt for consistency
